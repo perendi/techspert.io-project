@@ -1,18 +1,23 @@
-import { Component } from '@angular/core';
-import { Http } from '@angular/http';
+import { Component, OnInit } from '@angular/core';
+import { WeatherService } from '../services/weather.service';
 
 @Component({
   selector: 'weather',
   templateUrl: './weather.component.html',
   styleUrls: ['./weather.component.css']
 })
-export class WeatherComponent {
+export class WeatherComponent implements OnInit{
 
-  constructor(http : Http) {
-    http.get('http://api.openweathermap.org/data/2.5/weather?q=London&appid=194333f5b09188fbda8c4a3bbfea30b2')
+  data: any[];
+  
+  constructor(private service: WeatherService) {}
+
+  ngOnInit(){
+    this.service.getWeather('London')
       .subscribe(response => {
-        console.log(response);
+        this.data = response.json();
+        console.log(this.data);
       });
-   }
+  }
 
 }
