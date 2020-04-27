@@ -1,0 +1,7 @@
+.mat-elevation-z8, .full-width-table{
+  width: 70%;
+  margin: 10%;
+}
+input{
+  outline: 1px solid gray;
+}
