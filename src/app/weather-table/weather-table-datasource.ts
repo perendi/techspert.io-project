@@ -27,6 +27,14 @@ export class WeatherTableDataSource extends DataSource<WeatherTableItem> {
     this.data =  weatherdata;
   }
 
+  // filterCities(value: string){
+  //   let res = this.data
+  //     .filter(match => match.name.toLowerCase().includes(value.trim().toLowerCase()));
+  //   this.data = res;
+  //   return this.data;
+  // }
+
+
   /**
    * Connect this data source to the table. The table will only update when
    * the returned stream emits new items.
