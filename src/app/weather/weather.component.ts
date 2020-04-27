@@ -8,12 +8,12 @@ import { WeatherService } from '../services/weather.service';
 })
 export class WeatherComponent implements OnInit{
 
-  data: any[];
+  data: any;
   
   constructor(private service: WeatherService) {}
 
   ngOnInit(){
-    this.service.getWeather('London')
+    this.service.getWeather(10)
       .subscribe(response => {
         this.data = response.json();
         console.log(this.data);

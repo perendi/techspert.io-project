@@ -6,12 +6,13 @@ import { Injectable } from '@angular/core';
 })
 export class WeatherService {
 
-  private url = 'http://api.openweathermap.org/data/2.5/weather?q=';
+  private url2 = 'http://api.openweathermap.org/data/2.5/weather?q=';
   private id = '194333f5b09188fbda8c4a3bbfea30b2';
+  private url = 'http://api.openweathermap.org/data/2.5/find?lat=52.2053&lon=0.1218&cnt='
 
   constructor(private http: Http) { }
 
-  getWeather(city: string){
-    return this.http.get(this.url+city+'&appid='+this.id);
+  getWeather(nrOfCities: number){
+    return this.http.get(this.url+nrOfCities+'&appid='+this.id);
   }
 }
