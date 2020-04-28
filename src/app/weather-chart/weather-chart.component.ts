@@ -1,9 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Chart } from 'chart.js';
 import { WeatherService } from '../services/weather.service';
-import { NR_OF_CITIES } from '../weather-table/weather-table.component';
-
-const KELVIN = 273.15;
+import { NR_OF_CITIES, KELVIN } from '../weather-table/weather-table.component';
 
 @Component({
   selector: 'weather-chart',
@@ -30,14 +28,14 @@ export class WeatherChartComponent implements OnInit {
 
         //Populating the temps array with the temperature values
         for(let city of this.data){
-          this.temps.push(city.main.temp);
+          this.temps.push((city.main.temp-KELVIN).toFixed(2)); //converting to Celsius with 2 decimal places
           this.cities.push(city.name);
-          total += city.main.temp;
+          total += (city.main.temp-KELVIN); //converting to Celsius
         }
 
         //Populating the avgtemp array with the average values
         this.avgtemp.length = NR_OF_CITIES;
-        this.avgtemp.fill(total/NR_OF_CITIES);
+        this.avgtemp.fill((total/NR_OF_CITIES).toFixed(2));
 
         //Chart
         var context = (this.canvas.nativeElement).getContext("2d");

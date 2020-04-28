@@ -6,6 +6,7 @@ import { WeatherService } from '../services/weather.service';
 
 let weatherData = [];
 export const NR_OF_CITIES = 20; //Number of cities
+export const KELVIN = 273.15; 
 
 @Component({
   selector: 'weather-table',
@@ -34,7 +35,7 @@ export class WeatherTableComponent implements OnInit {
         this.data.forEach(city => {
           weatherData.push({
             name: city.name,
-            temperature: city.main.temp,
+            temperature: (city.main.temp-KELVIN).toFixed(2), //Converting to Celsius with 2 decimal places
             description: city.weather[0].description
           })
         })

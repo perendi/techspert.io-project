@@ -1,3 +1,4 @@
+import { MockService } from './services/mockservice';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -17,7 +18,7 @@ import { WeatherChartComponent } from './weather-chart/weather-chart.component'
 @NgModule({
   declarations: [AppComponent, WeatherTableComponent, WeatherChartComponent],
   imports: [BrowserModule, AppRoutingModule, HttpModule, MatPaginatorModule, MatTableModule, MatSortModule, BrowserAnimationsModule, MatFormFieldModule, MatInputModule],
-  providers: [WeatherService],
+  providers: [WeatherService, MockService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
