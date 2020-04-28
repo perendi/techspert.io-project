@@ -12,7 +12,7 @@ import { WeatherTableDataSource, WeatherTableItem } from './weather-table-dataso
 export class WeatherTableComponent implements OnInit {
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
-  @ViewChild(MatTable) table: MatTable<WeatherTableItem>;
+  @ViewChild(MatTable, {static: true}) table: MatTable<WeatherTableItem>;
   dataSource: WeatherTableDataSource;
 
   /** Columns displayed in the table. */
@@ -21,7 +21,7 @@ export class WeatherTableComponent implements OnInit {
   ngOnInit() {
     this.dataSource = new WeatherTableDataSource();
     this.dataSource.sort = this.sort;
-    this.dataSource.paginator = this.paginator;
+    this.dataSource.paginator = this.paginator; 
   }
 
   applyFilter(value: string){

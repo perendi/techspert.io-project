@@ -49,6 +49,8 @@ export class WeatherTableDataSource extends DataSource<WeatherTableItem> {
       this.sort.sortChange
     ];
 
+    //TODO 
+    // CHANGE HERE : https://stackoverflow.com/questions/52345352/not-able-to-display-data-when-component-loads-using-angular-material-table
     return merge(...dataMutations).pipe(map(() => {
       return this.getPagedData(this.getSortedData([...this.data]));
     }));

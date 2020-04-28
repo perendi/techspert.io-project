@@ -12,10 +12,11 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input'
+import { MatInputModule } from '@angular/material/input';
+import { WeatherChartComponent } from './weather-chart/weather-chart.component'
 
 @NgModule({
-  declarations: [AppComponent, WeatherComponent, WeatherTableComponent],
+  declarations: [AppComponent, WeatherComponent, WeatherTableComponent, WeatherChartComponent],
   imports: [BrowserModule, AppRoutingModule, HttpModule, MatPaginatorModule, MatTableModule, MatSortModule, BrowserAnimationsModule, MatFormFieldModule, MatInputModule],
   providers: [WeatherService],
   bootstrap: [AppComponent],

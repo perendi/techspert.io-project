@@ -1,10 +1,11 @@
-<mat-form-field>
-  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search">
+<mat-form-field appearance="fill">
+  <mat-label>Search</mat-label>
+  <input matInput (keyup)="applyFilter($event.target.value)">
 </mat-form-field>
 
 
 <div class="mat-elevation-z8">
-  <table mat-table [dataSource]="dataSource" class="full-width-table" matSort aria-label="Weather">
+  <table mat-table #table [dataSource]="dataSource" class="weathertable" matSort aria-label="Weather">
 
     <!-- Name Column -->
     <ng-container matColumnDef="name">
