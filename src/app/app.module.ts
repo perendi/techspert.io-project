@@ -5,7 +5,6 @@ import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { WeatherComponent } from './weather/weather.component';
 import { WeatherService } from './services/weather.service';
 import { WeatherTableComponent } from './weather-table/weather-table.component';
 import { MatTableModule } from '@angular/material/table';
@@ -16,7 +15,7 @@ import { MatInputModule } from '@angular/material/input';
 import { WeatherChartComponent } from './weather-chart/weather-chart.component'
 
 @NgModule({
-  declarations: [AppComponent, WeatherComponent, WeatherTableComponent, WeatherChartComponent],
+  declarations: [AppComponent, WeatherTableComponent, WeatherChartComponent],
   imports: [BrowserModule, AppRoutingModule, HttpModule, MatPaginatorModule, MatTableModule, MatSortModule, BrowserAnimationsModule, MatFormFieldModule, MatInputModule],
   providers: [WeatherService],
   bootstrap: [AppComponent],

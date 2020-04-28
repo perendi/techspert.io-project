@@ -1,6 +1,16 @@
 .mat-elevation-z8, .weathertable{
   width: 70%;
-  margin: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+
+h1 {
+  margin-left: 28%;
+  margin-right: 28%;
+  font-size: 40px;
+  font-family: cursive;
 }
 
 mat-form-field{

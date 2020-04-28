@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Chart } from 'chart.js';
 import { WeatherService } from '../services/weather.service';
+import { NR_OF_CITIES } from '../weather-table/weather-table.component';
 
-const NR_OF_CITIES = 20;
 const KELVIN = 273.15;
 
 @Component({
