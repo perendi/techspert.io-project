@@ -11,6 +11,11 @@ export class WeatherService {
 
   constructor(private http: Http) { }
 
+  /**
+   * getWeather performs the http request for the specified amount
+   *  of cities in the Cambridge area.
+   * @param nrOfCities Number of cities we want to fetch information about
+   */
   getWeather(nrOfCities: number){
     return this.http.get(this.url+nrOfCities+'&appid='+this.id);
   }

@@ -29,7 +29,6 @@ export class WeatherTableComponent implements OnInit {
     //Consuming WeatherService
     this.service.getWeather(NR_OF_CITIES)
       .subscribe(response => {
-        console.log(response);
         this.data = response.json().list;
         
         //Feeding the data into the weatherData array
@@ -53,6 +52,11 @@ export class WeatherTableComponent implements OnInit {
       });
   }
 
+  /**
+  * applyFilter method applies the specified filter
+  * on the dataSource
+  * @param value The substring we are searching for
+  */
   applyFilter(value: string){
     this.dataSource.filter = value.trim().toLowerCase();
   }

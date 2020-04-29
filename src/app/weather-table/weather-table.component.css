@@ -17,3 +17,9 @@ h1 {
 mat-form-field{
   margin-left: 10%;
 }
+
+.jumbotron {
+  background-image: url('./../../assets/cloud-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
