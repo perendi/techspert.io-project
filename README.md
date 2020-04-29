@@ -6,7 +6,7 @@ See the deployed project here: <https://perendi.github.io/techspert.io-project/>
 
 # Objectives and my solutions
 
--I had to create an angular project, and use the open weather API to retrive data on at least 10 cities.
+-I had to create an angular project, and use the open weather API to retrieve data on at least 10 cities.
 
 After creating the project I know I will need a service to deal with the http request, so I started to build that. Considering that techspert.io is located in Cambridge, I targeted this area to get weather information on 20 cities.
 
