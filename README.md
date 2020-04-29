@@ -2,7 +2,7 @@
 
 This project is about getting and displaying real-time weather data in a table, and on a graph.
 
-See the deployed project here: <!-- url -->
+See the deployed project here: https://perendi.github.io/techspert.io-project/
 
 # Objectives and my solutions
 
