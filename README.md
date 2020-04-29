@@ -12,7 +12,7 @@ After creating the project I know I will need a service to deal with the http re
 
 -I had to populate a table with the data, and introduce configurable pagination(5, 10, 20) and sortable columns
 
-I need to implement pagination and sorting on a data table, so I decided to use the angular material library and use a mat-table for the data, because it's easily configurable and sortable.
+I need to implement pagination and sorting on a data table, so I decided to use the angular material library and use a mat-table for the data, because it's easily configurable and sortable. (Don't be fooled by the sorting arrows, they are indicating whether the order is ascending or descending, not the "direction". When it's pointing up, it means ascending order, when it's pointing down, it means descending order)
 
 -I had to introduce a filter for searching by city name
 
