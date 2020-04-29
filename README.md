@@ -1,27 +1,31 @@
-# TechspertProject
+# Techspert.io Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
+This project is about getting and displaying real-time weather data in a table, and on a graph.
 
-## Development server
+See the deployed project here: <!-- url -->
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Objectives and my solutions
 
-## Code scaffolding
+-I had to create an angular project, and use the open weather API to retrive data on at least 10 cities.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+After creating the project I know I will need a service to deal with the http request, so I started to build that. Considering that techspert.io is located in Cambridge, I targeted this area to get weather information on 20 cities.
 
-## Build
+-I had to populate a table with the data, and introduce configurable pagination(5, 10, 20) and sortable columns
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+I need to implement pagination and sorting on a data table, so I decided to use the angular material library and use a mat-table for the data, because it's easily configurable and sortable.
 
-## Running unit tests
+-I had to introduce a filter for searching by city name
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Again the material library helped a lot, as I just had to create a matInput field and filter the data according to the field's value.
 
-## Running end-to-end tests
+-I had to create a graph displaying the temperatures for all cities and a line showing the mean temperature.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+I used the chart.js library for this task, because it gives us a modern look and feel, and it's easily configurable.
 
-## Further help
+-I had to implement unit tests for the pagination and the filter
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+I created a mock backend to simulate the http request, then populated the table with mock data, and created test cases for the pagination and the filter field. Run this by using 'ng test'.
+
+# Conclusion
+
+I had a lot of fun working on this project and I feel like I gained a lot of valuable programming experience in Angular. Thank you for the opportunity techspert.io!
