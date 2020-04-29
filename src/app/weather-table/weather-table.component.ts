@@ -6,7 +6,7 @@ import { WeatherService } from '../services/weather.service';
 
 let weatherData = [];
 export const NR_OF_CITIES = 20; //Number of cities
-export const KELVIN = 273.15; 
+export const KELVIN = 273.15; //Kelvin to Celsius conversion rate
 
 @Component({
   selector: 'weather-table',
@@ -29,6 +29,7 @@ export class WeatherTableComponent implements OnInit {
     //Consuming WeatherService
     this.service.getWeather(NR_OF_CITIES)
       .subscribe(response => {
+        console.log(response);
         this.data = response.json().list;
         
         //Feeding the data into the weatherData array
