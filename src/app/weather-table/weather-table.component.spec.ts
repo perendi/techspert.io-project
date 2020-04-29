@@ -93,7 +93,7 @@ describe('WeatherTableComponent', () => {
     component.dataSource.paginator.nextPage();
     fixture.detectChanges();
     let rangeElement = fixture.nativeElement.querySelector('.mat-paginator-range-label');
-    expect(rangeElement.innerText.trim()).toBe('11 – 20 of 20');
+    expect(rangeElement.innerText.trim()).toBe('11 – 20 of '+mockData.length);
   })
 
   it('should show 5 entries per page when the paginator is set to 5', () => {
@@ -106,7 +106,7 @@ describe('WeatherTableComponent', () => {
     component.dataSource.paginator.nextPage();
     fixture.detectChanges();
     let rangeElement = fixture.nativeElement.querySelector('.mat-paginator-range-label');
-    expect(rangeElement.innerText.trim()).toBe('6 – 10 of 20');
+    expect(rangeElement.innerText.trim()).toBe('6 – 10 of '+mockData.length);
   })
 
   it('should show items 11-15 on the third page when set to 5', () => {
@@ -115,7 +115,7 @@ describe('WeatherTableComponent', () => {
     component.dataSource.paginator.nextPage();
     fixture.detectChanges();
     let rangeElement = fixture.nativeElement.querySelector('.mat-paginator-range-label');
-    expect(rangeElement.innerText.trim()).toBe('11 – 15 of 20');
+    expect(rangeElement.innerText.trim()).toBe('11 – 15 of '+mockData.length);
   })
 
   it('should show items 16-20 on the last page when set to 5', () => {
@@ -125,7 +125,7 @@ describe('WeatherTableComponent', () => {
     component.dataSource.paginator.nextPage();
     fixture.detectChanges();
     let rangeElement = fixture.nativeElement.querySelector('.mat-paginator-range-label');
-    expect(rangeElement.innerText.trim()).toBe('16 – 20 of 20');
+    expect(rangeElement.innerText.trim()).toBe('16 – 20 of '+mockData.length);
   })
 
   it('should disable the next button on the last page when set to 5', () => {
